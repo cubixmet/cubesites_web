@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: oklch(0.99 0.003 150);
+  --surface: oklch(0.975 0.006 150);
+  --foreground: oklch(0.22 0.02 160);
+  --primary: oklch(0.47 0.105 154);
+  --primary-foreground: oklch(0.99 0.005 150);
+  --muted: oklch(0.96 0.006 150);
+  --muted-foreground: oklch(0.5 0.02 160);
+  --accent: oklch(0.94 0.035 152);
+  --border: oklch(0.91 0.01 150);
+  --ring: oklch(0.55 0.11 154);
+  --chart-1: oklch(0.47 0.105 154);
+  --chart-2: oklch(0.65 0.13 75);
+  --chart-3: oklch(0.55 0.1 230);
+  --chart-4: oklch(0.6 0.15 35);
+}
+
+html {
+  scroll-behavior: auto;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: color-mix(in oklch, var(--primary) 28%, white);
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, oklch(0.55 0.12 154 / 0.35), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 10%, oklch(0.7 0.1 85 / 0.2), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 70% 80%, oklch(0.5 0.08 200 / 0.15), transparent 55%),
+    linear-gradient(165deg, oklch(0.32 0.06 160), oklch(0.42 0.09 154) 45%, oklch(0.28 0.05 170));
+}
+
+.section-rail {
+  background-image: linear-gradient(
+    to right,
+    oklch(0.91 0.01 150 / 0.7) 1px,
+    transparent 1px
+  );
+  background-size: 72px 100%;
 }

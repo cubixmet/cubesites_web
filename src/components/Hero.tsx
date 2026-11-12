@@ -34,11 +34,11 @@ export function Hero() {
             />
           </div>
           <h1 className="font-display text-[clamp(2.4rem,6vw,4.4rem)] leading-[1.05] font-semibold tracking-tight">
-            Every site&apos;s money, bills and progress — in one place.
+            Construction bookkeeping for every site — money, bills and progress.
           </h1>
           <p className="mt-5 max-w-xl text-base text-white/80 sm:text-lg">
-            CuboSites is bookkeeping built for construction contractors. Capture expenses and
-            payments on site, keep staff aligned, and stay on top of subscriptions without
+            CuboSites is mobile-first bookkeeping for construction contractors. Capture expenses and
+            client payments on site, keep staff permissions tight, and export reports without
             spreadsheet chaos.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">

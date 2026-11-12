@@ -10,9 +10,30 @@ export const SITE = {
   phone: "8921592742",
   phoneDisplay: "+91 89215 92742",
   phoneHref: "tel:+918921592742",
+  title: "CuboSites | Construction Contractor Bookkeeping Software",
+  titleShort: "Bookkeeping for every construction site",
   description:
-    "CuboSites is mobile-first bookkeeping for construction contractors — expenses, client payments, staff, photos, reminders, wallet billing and Drive backups across every site.",
+    "CuboSites is mobile-first bookkeeping for construction contractors. Track site expenses, client payments, staff, photos and reports — with wallet billing and Google Drive backups.",
+  ogImage: {
+    url: "/og.jpg",
+    width: 1280,
+    height: 720,
+    alt: "CuboSites — bookkeeping for every construction site",
+    type: "image/jpeg",
+  },
 } as const;
+
+export const SEO_KEYWORDS = [
+  "construction bookkeeping software",
+  "contractor expense tracker",
+  "site cost management",
+  "construction accounting app India",
+  "contractor PWA",
+  "multi site ledger",
+  "construction payment tracking",
+  "CuboSites",
+  "Cubixmet",
+] as const;
 
 export const NAV = [
   { href: "#product", label: "Product" },

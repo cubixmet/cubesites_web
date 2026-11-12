@@ -3,9 +3,29 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy & Terms",
-  description: `How ${SITE.name} handles contractor workspace data, and the terms for using the service.`,
+  title: "Privacy Policy & Terms of Use",
+  description: `Privacy policy and terms for ${SITE.name} — how Cubixmet handles contractor workspace data, accounts, billing and backups.`,
   alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: `Privacy & Terms | ${SITE.name}`,
+    description: `How ${SITE.name} handles contractor workspace data and the terms for using the service.`,
+    url: `${SITE.url}/privacy`,
+    images: [
+      {
+        url: SITE.ogImage.url,
+        width: SITE.ogImage.width,
+        height: SITE.ogImage.height,
+        alt: SITE.ogImage.alt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Privacy & Terms | ${SITE.name}`,
+    description: `How ${SITE.name} handles contractor workspace data.`,
+    images: [SITE.ogImage.url],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {

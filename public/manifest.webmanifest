@@ -1,0 +1,18 @@
+{
+  "name": "CuboSites",
+  "short_name": "CuboSites",
+  "description": "Construction contractor bookkeeping — expenses, payments, staff and reports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7faf8",
+  "theme_color": "#2e6e4a",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
